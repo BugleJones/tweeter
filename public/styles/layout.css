@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  font-family: "Roboto Condensed", arial, sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
