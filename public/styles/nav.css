@@ -1,0 +1,31 @@
+.full-page-nav #nav-bar {
+  background-color: #00a087;
+  width: 100%;
+}
+
+#nav-bar .header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#nav-bar .header {
+  float: left;
+  padding: 0 0 0 10px;
+  font-size: 200%;
+  line-height: 250%;
+}
+
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+  float: left;
+}
+
+#nav-bar {
+  position: fixed;
+  height: 80px;
+  color: #e8fdff;
+  background-color: inherit;
+  padding: 0 2.0em 0 2.0em;
+}
