@@ -1,6 +1,18 @@
 .full-page-nav #nav-bar {
   background-color: #00a087;
   width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+#nav-bar {
+  height: 80px;
+  color: #e8fdff;
+  background-color: inherit;
+  padding: 0 2.0em;
 }
 
 #nav-bar .header:after {
@@ -20,12 +32,4 @@
   height: 80px;
   width: 80px;
   float: left;
-}
-
-#nav-bar {
-  position: fixed;
-  height: 80px;
-  color: #e8fdff;
-  background-color: inherit;
-  padding: 0 2.0em 0 2.0em;
 }
