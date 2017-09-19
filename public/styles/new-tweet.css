@@ -2,9 +2,39 @@
   background-color: #eeeeee;
   border: 1px solid #ccc;
   margin: 0 2em;
+  align-items: center;
 }
 
 .new-tweet h2 {
   margin: 10px;
   border-bottom: 1px solid #000;
+}
+
+.new-tweet:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+form {
+  padding: 10px;
+  position: relative;
+}
+
+textarea {
+  padding: 5px;
+  width: 100%;
+}
+
+input {
+  display: flex;
+  padding: 5px;
+}
+
+span.counter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 80%;
+  padding: 10px;
 }
