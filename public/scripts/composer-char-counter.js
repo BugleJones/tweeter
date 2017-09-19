@@ -1,10 +1,15 @@
 $(document).ready(function () {
-  const textBox = ".new-tweet textarea";
+  const characterCount = ".new-tweet textarea";
   function updateCount() {
     let remaining = 140 - $(this).val().length;
-    $(".counter").text(remaining);
+    $("form").find("span").text(remaining);
   }
-  $(textBox).change(updateCount);
-  $(textBox).keyup(updateCount);
+  $(characterCount).change(updateCount);
+  $(characterCount).keyup(updateCount);
 
+  if (characterCount < 0) {
+    $("form").find("span").addClass("tooManyCharacters");
+  } else {
+    $("form").find("span").removeClass("tooManyCharacters");
+  }
 });
