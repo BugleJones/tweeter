@@ -78,6 +78,6 @@ footer {
   visibility: hidden;
 }
 
-.all-tweets:hover .icons {
+.tweet:hover .icons {
   visibility: visible;
 }
