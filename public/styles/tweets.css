@@ -1,6 +1,5 @@
 .all-tweets {
   padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .tweet-header:after,
@@ -15,27 +14,29 @@
   border-radius: 5px;
   background-color: #eeeeee;
   border: 1px solid #ccc;
-  margin: 0 2em;
+  background-color: #f2d8cf;
+  margin: 8px 32px;
   align-items: center;
   z-index: inherit;
 }
 
 .tweet header {
+  background-color: #eee;
   display: flex;
   align-items: flex-start;
   padding: 5px;
 }
 
-.avatar {
+img {
   display: inline-flex;
-  border-radius: 25px;
-  height: 48px;
-  padding-right: 10px;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
 }
 
 .user {
-  font-size: 125%;
   flex-grow: 1;
+  padding-left: 10px;
 }
 
 .handle {
