@@ -3,6 +3,13 @@
   padding-bottom: 20px;
 }
 
+.tweet-header:after,
+.tweet-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .tweet {
   position: relative;
   border-radius: 5px;
@@ -16,6 +23,7 @@
 .tweet header {
   display: flex;
   align-items: flex-start;
+  padding: 5px;
 }
 
 .avatar {
@@ -26,7 +34,6 @@
 }
 
 .name {
-  display: inline-flex;
   font-size: 125%;
 }
 
@@ -50,17 +57,25 @@
 
 footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-top: 1px solid #ccc;
-  font-size: 75%;
+  font-size: 80%;
   background-color: #f2d8cf;
 }
 
 .time-ago {
-  justify-content: flex-start;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .icons {
-  justify-content: flex-end;
-  padding-left: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  visibility: hidden;
+}
+
+.all-tweets:hover .icons {
+  visibility: visible;
 }
