@@ -1,15 +1,20 @@
-$(document).ready(function () {
+var $;
+
+$(function() {
   const characterCount = ".new-tweet textarea";
   function updateCount() {
     let remaining = 140 - $(this).val().length;
-    $("form").find("span").text(remaining);
+    $(this).siblings("span").text(remaining);
+    if (remaining < 0) {
+      $(this).siblings("span").addClass("alertText");
+    } else {
+      $(this).siblings("span").removeClass("alertText");
+    }
   }
-  $(characterCount).change(updateCount);
-  $(characterCount).keyup(updateCount);
 
-  if (characterCount < 0) {
-    $("form").find("span").addClass("tooManyCharacters");
-  } else {
-    $("form").find("span").removeClass("tooManyCharacters");
-  }
+  $(characterCount).keyup(updateCount);
+  $(characterCount).mouseup(updateCount);
+  $(characterCount).mouseout(updateCount);
+  $(characterCount).change(updateCount);
+
 });
