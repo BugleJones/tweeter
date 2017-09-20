@@ -9,10 +9,24 @@
 }
 
 #nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   height: 80px;
   color: #e8fdff;
   background-color: inherit;
   padding: 0 2.0em;
+}
+
+#nav-bar .compose {
+  border-radius: 5px;
+  order: 2;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 75%;
+  color: navy;
+  background-color: whitesmoke;
 }
 
 #nav-bar .header:after {
@@ -23,12 +37,14 @@
 
 #nav-bar .header {
   float: left;
+  order: 1;
   padding: 0 0 0 10px;
   font-size: 200%;
   line-height: 250%;
 }
 
 #nav-bar .logo {
+  order: 1;
   height: 80px;
   width: 80px;
   float: left;

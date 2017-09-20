@@ -38,6 +38,8 @@ body {
   padding: 140px 0 80px 0;
 }
 
+/* If > 140 words */
+
 .alertText {
   color: tomato;
 }

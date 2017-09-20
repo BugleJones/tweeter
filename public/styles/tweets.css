@@ -18,6 +18,7 @@
   margin: 8px 32px;
   align-items: center;
   z-index: inherit;
+
 }
 
 .tweet header {
@@ -55,6 +56,20 @@ img {
   border-top: 1px solid #ccc;
   background-color: #f2d8cf;
   padding: 10px;
+}
+
+/* Wrapping URLs and Long single words*/
+
+.tweet-detail {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 footer {
