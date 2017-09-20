@@ -1,6 +1,6 @@
 var $;
 
-var tweetData =
+var tweetData = [
   {
     "user": {
       "name": "Newton",
@@ -15,59 +15,60 @@ var tweetData =
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
     "created_at": 1461116232227
-  };
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": {
-//         "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-//         "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-//         "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-//       },
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   },
-//   {
-//     "user": {
-//       "name": "Johann von Goethe",
-//       "avatars": {
-//         "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-//         "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-//         "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-//       },
-//       "handle": "@johann49"
-//     },
-//     "content": {
-//       "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-//     },
-//     "created_at": 1461113796368
-//   }
-// ];
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": {
+        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
+        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
+        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
+      },
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Johann von Goethe",
+      "avatars": {
+        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
+        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+      },
+      "handle": "@johann49"
+    },
+    "content": {
+      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+    },
+    "created_at": 1461113796368
+  }
+];
 
-$(function() {
-  function createTweetElement(tweetObject) {
+function createTweetElement(tweetObject) {
+  $(function() {
     const $tweet = $("<article>").addClass("tweet");
     $(".all-tweets").append($tweet);
 
     //Tweet Header//
-    const img = $("<img>").attr("src", tweetObject.user.avatars.small);
-    const handle = $("<p>").addClass("handle").text(tweetObject.user.handle);
-    const user = $("<p>").addClass("user").text(tweetObject.user.name);
+    const $img = $("<img>").addClass("avatar").attr("src", tweetObject.user.avatars.small);
+    const $handle = $("<p>").addClass("handle").text(tweetObject.user.handle);
+    const $user = $("<p>").addClass("user").text(tweetObject.user.name);
 
-    const $header = $("<header>").append(img, handle, user);
+    const $header = $("<header>")
+      .append($img)
+      .append($user)
+      .append($handle);
 
     $tweet.append($header);
 
     //Tweet Content//
-    const content = $("<p>").addClass("tweet-detail").text(tweetObject.content.text);
-    const $content = $("<div>").addClass("tweet-content")
-      .append(content);
+    const $contentDetail = $("<p>").addClass("tweet-detail").text(tweetObject.content.text);
+    const $contentContainer = $("<div>").addClass("tweet-content").append($contentDetail);
 
-    $tweet.append($content);
+    $tweet.append($contentContainer);
 
     //Tweet Footer//
     const createdAt = $("<p>").text(Date(tweetObject.user.created_at));
@@ -84,16 +85,14 @@ $(function() {
 
     $tweet.append($footer);
 
-  }
+  });
+}
 
-  createTweetElement(tweetData);
-  //
-  // function renderTweets(tweetObject) {
-  //   $(tweetObject).each(tweetData, function () {
-  //     createTweetElement();
-  //   });
-  //   renderTweets(tweetData);
-  //
-  // };
+function renderTweets(tweetsArray) {
+  tweetsArray.forEach(tweetData => {
+    createTweetElement(tweetData);
+  });
+  return tweetsArray;
+}
 
-});
+renderTweets(tweetData);
