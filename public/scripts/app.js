@@ -49,6 +49,10 @@ var tweetData = [
 
 $(function() {
 
+  function loadTweets() {
+
+  }
+
   function renderTweets(tweetsArray) {
     tweetsArray.forEach(tweetData => {
       createTweetElement(tweetData);
