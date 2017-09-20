@@ -1,0 +1,47 @@
+.all-tweets {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tweet {
+  position: relative;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  margin: 0 2em;
+  align-items: center;
+  z-index: inherit;
+}
+
+.tweet header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.avatar {
+  display: inline-flex;
+  border-radius: 25px;
+  height: 48px;
+  padding-right: 10px;
+}
+
+.name {
+  display: inline-flex;
+  font-size: 125%;
+}
+
+.handle {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  color: #f88379;
+  font-size: 100%;
+  line-height: 50%;
+  padding-right: 10px;
+}
+
+.tweet-content {
+  border-top: 1px solid #ccc;
+}

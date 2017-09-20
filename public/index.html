@@ -13,12 +13,13 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
+    <!-- Tweets CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <!-- NavBar CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -45,26 +46,29 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-          <div class="all-tweets">
             <form action="/tweets/" method="POST">
               <textarea name="text" placeholder="What are you humming about?"></textarea>
               <input type="submit" value="Tweet">
               <span class="counter">140</span>
             </form>
-            <article class="tweet">
-              <header>
-                <img class="avatar" src="https://vignette2.wikia.nocookie.net/disney/images/4/45/Striompic.png/revision/latest?cb=20131227155320" alt="avatar-image">
+        </section>
+        <div class="all-tweets">
+          <article class="tweet">
+            <header>
+              <img class="avatar" src="/images/Striompic.jpeg" alt="avatar-image">
+              <a class="handle" href="#">
+                <p>@DislikeAllDis<p>
+              </a>
+              <p class="name">Stromboli</p>
+            </header>
+              <div class="tweet-content">
+                <p> I'm a Tweeter King </p>
+              </div>
+            <footer>
 
-              </header>
-                <div class="tweet-content">
-                  <p> I'm a Tweeter King </p>
-                </div>
-              <footer>
-
-              <footer>
-            </article>
-          </div>
-      </section>
+            <footer>
+          </article>
+        </div>
     </main>
 
   </body>
