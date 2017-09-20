@@ -2,9 +2,24 @@ var $;
 
 $(function() {
 
-  const handlers = {
+  const addingTweets = {
     successfulTweet: function (event) {
       event.preventDefault();
+      const input = $("textarea");
+      if (input.val().length > 140) {
+        $(".submit-tweet").prepend($("<div></div>").addClass("tweet-error").text(`Slow down there, partner,
+          tweet away but keep it below 140`).fadeIn(200).fadeOut(4000));
+        return;
+      }
+      if (!input.val()) {
+        $(".submit-tweet").prepend($("<div></div>").addClass("tweet-error").text("I couldn't catch that, try again?").fadeIn(200).fadeOut(4000));
+        return;
+      }
+      if (input.val() === null) {
+        $(".submit-tweet").prepend($("<div></div>").addClass("tweet-error").text("I couldn't catch that, try again?").fadeIn(200).fadeOut(4000));
+        return;
+      }
+
       const tweetContent = $(".submit-tweet").serialize();
       $.post("/tweets", tweetContent, function () {
         $("textarea").val("");
@@ -12,7 +27,7 @@ $(function() {
       });
     },
   };
-  $(".submit-tweet").submit(handlers.successfulTweet);
+  $(".submit-tweet").submit(addingTweets.successfulTweet);
 
   function loadTweets() {
     $.ajax({
@@ -33,8 +48,6 @@ $(function() {
       $(".all-tweets").prepend(createTweetElement(tweetData));
     });
   }
-
-  // renderTweets(tweetData);
 
   // function timeSince(date) {
   //   var seconds = Math.floor((new Date() - date) / 1000);
