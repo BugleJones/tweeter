@@ -1,5 +1,5 @@
 .all-tweets {
-  padding-top: 20px;
+  padding: 32px;
 }
 
 .tweet-header:after,
@@ -15,7 +15,7 @@
   background-color: #eeeeee;
   border: 1px solid #ccc;
   background-color: #f2d8cf;
-  margin: 8px 32px;
+  margin-bottom: 10px;
   align-items: center;
   z-index: inherit;
 

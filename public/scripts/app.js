@@ -49,6 +49,13 @@ $(function() {
     });
   }
 
+  //Toggle New-Tweet Menu//
+  $(".compose").click(function() {
+    $(".new-tweet").slideToggle("fast", function() {
+    });
+    $("textarea").focus();
+  });
+
   // function timeSince(date) {
   //   var seconds = Math.floor((new Date() - date) / 1000);
   //   var interval = Math.floor(seconds / 31536000);
