@@ -33,8 +33,9 @@
   padding-right: 10px;
 }
 
-.name {
+.user {
   font-size: 125%;
+  flex-grow: 1;
 }
 
 .handle {
