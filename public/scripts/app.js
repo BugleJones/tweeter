@@ -56,31 +56,44 @@ $(function() {
     $("textarea").focus();
   });
 
-  // function timeSince(date) {
-  //   var seconds = Math.floor((new Date() - date) / 1000);
-  //   var interval = Math.floor(seconds / 31536000);
-  //   if (interval > 1) {
-  //     return interval + " years";
-  //   }
-  //   interval = Math.floor(seconds / 2592000);
-  //   if (interval > 1) {
-  //     return interval + " months";
-  //   }
-  //   interval = Math.floor(seconds / 86400);
-  //   if (interval > 1) {
-  //     return interval + " days";
-  //   }
-  //   interval = Math.floor(seconds / 3600);
-  //   if (interval > 1) {
-  //     return interval + " hours";
-  //   }
-  //   interval = Math.floor(seconds / 60);
-  //   if (interval > 1) {
-  //     return interval + " minutes";
-  //   }
-  //   return Math.floor(seconds) + " seconds";
-  // }
-  //   var aDay = 24*60*60*1000;
+  //Button change when clicked//
+  $(".compose").click(function () {
+    $(".compose").toggleClass("compose-clicked");
+  });
+
+  //Logo brightens compose tweet button//
+  $(".logo").mouseenter(function () {
+    $(".compose").addClass("compose-lighten");
+  });
+
+  $(".logo").mouseleave(function () {
+    $(".compose").removeClass("compose-lighten");
+  });
+
+  function timeSince(date) {
+    var seconds = Math.floor((new Date() - date) / 1000);
+    var interval = Math.floor(seconds / 31536000);
+    if (interval > 1) {
+      return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+      return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+      return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+      return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+      return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+  }
 
   function createTweetElement(tweetObject) {
     const $tweet = $("<article>").addClass("tweet");
@@ -104,7 +117,7 @@ $(function() {
     $tweet.append($contentContainer);
 
     //Tweet Footer//
-    const createdAt = $("<p>").text(Date(tweetObject.user.created_at));
+    const createdAt = $("<p>").text(timeSince(tweetObject.created_at) + " ago");
     const flagIcon = $("<i>").addClass("fa fa-exclamation-triangle");
     const retweetIcon = $("<i>").addClass("fa fa-retweet");
     const favouriteIcon = $("<i>").addClass("fa fa-star");

@@ -19,13 +19,27 @@
 
 #nav-bar .compose {
   border-radius: 5px;
+  border: 1px solid;
+  border-color: whitesmoke;
   order: 2;
+  cursor: pointer;
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
   height: 75%;
   color: navy;
   background-color: whitesmoke;
+}
+
+#nav-bar .compose-clicked {
+  background-color: #00a087;
+  border: 1px solid;
+  cursor: pointer;
+  border-color: whitesmoke;
+}
+
+#nav-bar .compose-lighten {
+  color: coral;
 }
 
 #nav-bar .header:after {
