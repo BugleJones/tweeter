@@ -52,8 +52,9 @@
   float: left;
   order: 1;
   padding: 0 0 0 10px;
-  font-size: 200%;
-  line-height: 250%;
+  font-size: 300%;
+  font-family: 'Merienda One', cursive;
+  line-height: 150%;
   color: #004a83;
 }
 
