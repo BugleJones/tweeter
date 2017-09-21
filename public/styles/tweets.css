@@ -54,7 +54,7 @@ img {
 
 .tweet-content {
   border-top: 1px solid #ccc;
-  background-color: #f2d8cf;
+  background-color: #f6efaa;
   padding: 10px;
 }
 
@@ -78,7 +78,7 @@ footer {
   justify-content: space-between;
   border-top: 1px solid #ccc;
   font-size: 80%;
-  background-color: #f2d8cf;
+  background-color: #f6efaa;
 }
 
 .time-ago {

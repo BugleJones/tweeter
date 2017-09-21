@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: #aae1f6;
 }
 
 .container:after {
@@ -33,7 +33,7 @@ body {
   align-items: center;
   width: 450px;
   color: #800000;
-  background-color: #ffffff;
+  background-color: #97cadd;
   padding: 120px 0 80px 0;
 }
 
