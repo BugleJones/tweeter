@@ -51,11 +51,10 @@
 #nav-bar .header {
   float: left;
   order: 1;
-  padding: 0 10px;
+  padding: 10px;
   font-size: 300%;
   font-family: 'Nixie One', cursive;
   font-weight: bold;
-  line-height: 150%;
   color: #004a83;
 }
 
@@ -65,8 +64,8 @@
 
 #nav-bar .logo {
   order: 1;
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   float: left;
   transform: scaleX(-1);
 }
