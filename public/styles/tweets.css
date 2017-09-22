@@ -11,14 +11,10 @@
 
 .tweet {
   position: relative;
-  border-radius: 5px;
-  background-color: #eeeeee;
-  border: 1px solid #ccc;
-  background-color: #f2d8cf;
+  border-radius: 10px;
   margin-bottom: 10px;
   align-items: center;
   z-index: inherit;
-
 }
 
 .tweet header {

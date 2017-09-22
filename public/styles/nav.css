@@ -1,5 +1,5 @@
 .full-page-nav #nav-bar {
-  background-color: #00a087;
+  background-color: #ace8df;
   position: fixed;
   left: 0;
   right: 0;
@@ -23,17 +23,21 @@
   border-color: whitesmoke;
   order: 2;
   cursor: pointer;
+  font-family: 'Nixie One', cursive;
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
   height: 75%;
+  font-weight: bold;
   color: navy;
   background-color: whitesmoke;
 }
 
 #nav-bar .compose-clicked {
-  background-color: #00a087;
+  background-color: #ace8df;
   border: 1px solid;
+  font-family: 'Nixie One', cursive;
+  font-weight: bold;
   cursor: pointer;
   border-color: whitesmoke;
 }
