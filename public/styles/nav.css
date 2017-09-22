@@ -17,9 +17,15 @@
   padding: 0 2.0em;
 }
 
+#nav-bar .header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #nav-bar .compose {
   border-radius: 5px;
-  border: 1px solid;
+  border: 2px solid;
   border-color: whitesmoke;
   order: 2;
   cursor: pointer;
@@ -30,32 +36,22 @@
   height: 75%;
   font-weight: bold;
   color: navy;
-  background-color: whitesmoke;
+  background-color: #ace8df;
 }
 
 #nav-bar .compose-clicked {
-  background-color: #ace8df;
-  border: 1px solid;
+  background-color: whitesmoke;
+  border: 2px solid;
   font-family: 'Nixie One', cursive;
   font-weight: bold;
   cursor: pointer;
   border-color: whitesmoke;
 }
 
-#nav-bar .compose-lighten {
-  color: coral;
-}
-
-#nav-bar .header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 #nav-bar .header {
   float: left;
   order: 1;
-  padding: 0 0 0 10px;
+  padding: 0 10px;
   font-size: 300%;
   font-family: 'Nixie One', cursive;
   font-weight: bold;

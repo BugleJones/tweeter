@@ -2,13 +2,6 @@
   padding: 32px;
 }
 
-.tweet-header:after,
-.tweet-footer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .tweet {
   position: relative;
   border-radius: 10px;
@@ -22,6 +15,8 @@
   display: flex;
   align-items: flex-start;
   padding: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .avatar {
@@ -74,6 +69,8 @@ footer {
   border-top: 1px solid #ccc;
   font-size: 80%;
   background-color: #f6efaa;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .time-ago {
@@ -87,6 +84,11 @@ footer {
   font-size: 130%;
   padding: 10px;
   visibility: hidden;
+}
+
+.fa.fa-star-o:hover:before {
+  content: "\f005";
+  color: gold;
 }
 
 .tweet:hover .icons {

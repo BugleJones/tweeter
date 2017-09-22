@@ -7,16 +7,15 @@ $(function() {
       event.preventDefault();
       const input = $("textarea");
       if (input.val().length > 140) {
-        $(".submit-tweet").prepend($("<div></div>").addClass("tweet-error").text(`Slow down there, partner,
-          tweet away but keep it below 140`).fadeIn(200).fadeOut(4000));
+        $(".submit-tweet").prepend($("<div>").addClass("tweet-error").text("Slow down there, tweet away but keep it below 140").fadeIn(200).fadeOut(4500));
         return;
       }
       if (!input.val()) {
-        $(".submit-tweet").prepend($("<div></div>").addClass("tweet-error").text("I couldn't catch that, try again?").fadeIn(200).fadeOut(4000));
+        $(".submit-tweet").prepend($("<div>").addClass("tweet-error").text("I couldn't catch that, try again?").fadeIn(200).fadeOut(4500));
         return;
       }
       if (input.val() === null) {
-        $(".submit-tweet").prepend($("<div></div>").addClass("tweet-error").text("I couldn't catch that, try again?").fadeIn(200).fadeOut(4000));
+        $(".submit-tweet").prepend($("<div>").addClass("tweet-error").text("I couldn't catch that, try again?").fadeIn(200).fadeOut(4500));
         return;
       }
 
@@ -50,26 +49,16 @@ $(function() {
   }
 
   //Toggle New-Tweet Menu//
-  $(".compose").click(function() {
+  $(".compose").on("click", function () {
     $(".new-tweet").slideToggle("fast", function() {
     });
     $("textarea").focus();
   });
 
   //Button change when clicked//
-  $(".compose").click(function () {
+  $(".compose").on("click", function () {
     $(".compose").toggleClass("compose-clicked");
   });
-
-  //Logo brightens compose tweet button//
-  $(".logo").mouseenter(function () {
-    $(".compose").addClass("compose-lighten");
-  });
-
-  $(".logo").mouseleave(function () {
-    $(".compose").removeClass("compose-lighten");
-  });
-
 
   //Function for time ago on tweets//
   function timeSince(date) {
@@ -122,7 +111,7 @@ $(function() {
     const createdAt = $("<p>").text(timeSince(tweetObject.created_at) + " ago");
     const flagIcon = $("<i>").addClass("fa fa-exclamation-triangle");
     const retweetIcon = $("<i>").addClass("fa fa-retweet");
-    const favouriteIcon = $("<i>").addClass("fa fa-star");
+    const favouriteIcon = $("<i>").addClass("fa fa-star-o");
 
     const $footerTime = $("<div>").addClass("time-ago").append(createdAt);
     const $footerIcons = $("<div>").addClass("icons").append(flagIcon, retweetIcon, favouriteIcon);
