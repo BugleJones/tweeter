@@ -53,9 +53,14 @@
   order: 1;
   padding: 0 0 0 10px;
   font-size: 300%;
-  font-family: 'Merienda One', cursive;
+  font-family: 'Nixie One', cursive;
+  font-weight: bold;
   line-height: 150%;
   color: #004a83;
+}
+
+#nav-bar .header::first-letter {
+  letter-spacing: 1px;
 }
 
 #nav-bar .logo {
@@ -63,10 +68,5 @@
   height: 80px;
   width: 80px;
   float: left;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
 }

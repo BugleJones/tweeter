@@ -28,13 +28,12 @@ body {
   margin: auto;
   align-items: center;
   width: 450px;
-  color: #800000;
+  color: #004a83;
   background-color: #97cadd;
   padding: 120px 0 80px 0;
 }
 
 /* If > 140 words */
-
 .alertText {
   color: tomato;
 }
