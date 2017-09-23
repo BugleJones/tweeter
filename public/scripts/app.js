@@ -57,7 +57,7 @@ $(function() {
 
   //Button change when clicked//
   $(".compose").on("click", function () {
-    $(".compose").toggleClass("compose-clicked");
+    $(".compose").stop().toggleClass("compose-clicked");
   });
 
   //Function for time ago on tweets//
@@ -109,12 +109,12 @@ $(function() {
 
     //Tweet Footer//
     const createdAt = $("<p>").text(timeSince(tweetObject.created_at) + " ago");
-    const flagIcon = $("<i>").addClass("fa fa-exclamation-triangle");
-    const retweetIcon = $("<i>").addClass("fa fa-retweet");
     const favouriteIcon = $("<i>").addClass("fa fa-star-o");
+    const retweetIcon = $("<i>").addClass("fa fa-retweet");
+    const flagIcon = $("<i>").addClass("fa fa-exclamation-triangle");
 
     const $footerTime = $("<div>").addClass("time-ago").append(createdAt);
-    const $footerIcons = $("<div>").addClass("icons").append(flagIcon, retweetIcon, favouriteIcon);
+    const $footerIcons = $("<div>").addClass("icons").append(favouriteIcon, retweetIcon, flagIcon);
 
     const $footer = $("<footer>")
       .append($footerTime)
